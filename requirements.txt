@@ -1,0 +1,50 @@
+# ==========================================
+# LANGCHAIN & LANGGRAPH - AGENT FRAMEWORKS
+# ==========================================
+
+langgraph==1.2.2                 # Stateful agent workflows, graph execution, nodes, edges and checkpointing
+langchain==1.3.2                 # LLM application framework for prompts, messages, tools and structured outputs
+langchain-groq==1.1.3            # Integrates Groq-hosted LLMs with LangChain for fast inference
+langchain-community==0.4.2       # Community integrations for external tools, APIs and data sources
+
+
+# ==========================================
+# EXTERNAL TOOLS - WEB SEARCH & HTTP
+# ==========================================
+
+langchain-tavily==0.2.18         # Integrates Tavily web search as a LangChain tool for travel research
+tavily-python==0.7.24            # Official Python SDK for directly accessing Tavily search APIs
+requests==2.34.2                 # Sends HTTP requests (GET, POST, PUT, DELETE) to external REST APIs
+
+
+# ==========================================
+# DATABASE - POSTGRESQL & MEMORY
+# ==========================================
+
+psycopg[binary]==3.3.4           # PostgreSQL adapter for executing SQL queries and storing application data
+psycopg_pool==3.3.1              # Manages reusable database connections for better performance
+langgraph-checkpoint-postgres==3.1.0  # Persists LangGraph agent states and conversation checkpoints in PostgreSQL
+
+
+# ==========================================
+# ENVIRONMENT CONFIGURATION
+# ==========================================
+
+python-dotenv==1.2.2             # Loads environment variables and API keys from .env files
+
+
+# ==========================================
+# TRAVEL DATA - AIRPORTS & COUNTRIES
+# ==========================================
+
+airportsdata==20260315           # Provides airport information, IATA/ICAO codes and geographical coordinates
+pycountry==26.2.16               # Provides country, currency and language information with ISO code validation
+
+
+# ==========================================
+# BACKEND - FASTAPI & SERVER
+# ==========================================
+
+fastapi==0.136.3                 # Builds REST APIs and exposes AI agent functionality to the frontend
+uvicorn==0.48.0                  # ASGI server used to run FastAPI applications
+jinja2==3.1.6                    # HTML template engine for rendering dynamic frontend pages
