@@ -1,16 +1,17 @@
 from tavily import TavilyClient
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
-client = TavilyClient(
-    api = os.getenv("TAVILY_API_KEY")
-)
+client = TavilyClient(api_key=os.getenv("TAVILY_API_KEY"))
+
+
 def tavilySearch(query):
-    response = client.search(query=query, max_results = 5)
+    response = client.search(query=query, max_results=5)
     results = []
     for i, r in enumerate(response["results"], 1):
-        title   = r.get("title", "Unknown")
-        url     = r.get("url", "")
+        title = r.get("title", "Unknown")
+        url = r.get("url", "")
         snippet = r.get("content", "").strip()
         # Keep only the first 300 characters to avoid wall-of-text
         if len(snippet) > 300:
@@ -27,7 +28,7 @@ def tavilySearch(query):
 # and receives the API response as a Python dictionary containing search results.
 # Each result is a dictionary with fields such as title, URL, content and score.
 # The function iterates through the results using enumerate() to maintain result numbering,
-# extracts the title, URL and content using dictionary.get() with default 
+# extracts the title, URL and content using dictionary.get() with default
 # values(that unknown and empty spaces are default values),
 # and removes unnecessary whitespace using strip().
 # To avoid passing excessively long content to the LLM (reducing token consumption),

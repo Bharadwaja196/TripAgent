@@ -1,3 +1,0 @@
-from tools.tavily import tavilySearch
-res = tavilySearch(" places to watch out in hyderabad")
-print(res)
